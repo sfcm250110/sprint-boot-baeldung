@@ -1,17 +1,60 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>Home Page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css" th:href="@{/css/home.css}">
 </head>
 
 <body>
-	<div class="container">
-		<h1>Hello !</h1>
-		<div class="alert alert-danger" role="alert">
-			<p>Welcome to <span th:text="${appName}">Our App</span></p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card flex-row my-5 card-signin">
+                    <div class="d-none d-md-flex card-img-left">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Registrarse</h5>
+                        <form class="form-signin">
+                            <div class="form-label-group">
+                                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
+                                <label for="inputUserame">Username</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                                <label for="inputEmail">Email address</label>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-label-group">
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <label for="inputPassword">Password</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                                <label for="inputConfirmPassword">Confirm password</label>
+                            </div>
+
+                            <hr class="my-4">
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>Hello !</h1>
+        <div class="alert alert-danger" role="alert">
+            <p>Welcome to <span th:text="${appName}">Our App</span></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
